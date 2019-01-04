@@ -9411,6 +9411,13 @@ module.exports = function (it, tag, stat) {
 
 /***/ }),
 
+/***/ "803b":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "80b3":
 /***/ (function(module, exports) {
 
@@ -24896,6 +24903,18 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 // EXTERNAL MODULE: ./node_modules/highlight.js/lib/index.js
 var lib = __webpack_require__("1487");
+var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
+
+// EXTERNAL MODULE: ./node_modules/highlight.js/lib/languages/javascript.js
+var javascript = __webpack_require__("4dd1");
+var javascript_default = /*#__PURE__*/__webpack_require__.n(javascript);
+
+// EXTERNAL MODULE: ./node_modules/highlight.js/lib/languages/php.js
+var php = __webpack_require__("2907");
+var php_default = /*#__PURE__*/__webpack_require__.n(php);
+
+// EXTERNAL MODULE: ./node_modules/highlight.js/styles/tomorrow-night-eighties.css
+var tomorrow_night_eighties = __webpack_require__("803b");
 
 // CONCATENATED MODULE: ./src/main.ts
 
@@ -24903,6 +24922,12 @@ var lib = __webpack_require__("1487");
 
 
 
+
+
+
+lib_default.a.fixMarkup('true');
+lib_default.a.registerLanguage('javascript', javascript_default.a);
+lib_default.a.registerLanguage('php', php_default.a);
 
 var main_Highlighter =
 /*#__PURE__*/
@@ -24917,7 +24942,7 @@ function () {
     key: "blocks",
     value: function blocks() {
       var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'pre code';
-      document.querySelectorAll(selector).forEach(lib["highlightBlock"]);
+      document.querySelectorAll(selector).forEach(lib_default.a.highlightBlock);
     }
   }], [{
     key: "install",
