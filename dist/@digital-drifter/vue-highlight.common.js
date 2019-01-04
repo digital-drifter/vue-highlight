@@ -24895,36 +24895,37 @@ var lib = __webpack_require__("1487");
 
 
 
-var main_Highlight =
+var main_Highlighter =
 /*#__PURE__*/
 function () {
-  function Highlight(options) {
-    _classCallCheck(this, Highlight);
+  function Highlighter(options) {
+    _classCallCheck(this, Highlighter);
 
     this.options = options;
   }
 
-  _createClass(Highlight, [{
+  _createClass(Highlighter, [{
     key: "blocks",
     value: function blocks() {
       var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'pre code';
       document.querySelectorAll(selector).forEach(lib["highlightBlock"]);
     }
+  }], [{
+    key: "install",
+    value: function install(vm, options) {
+      var instance = new vm();
+      Object.defineProperty(vm.prototype, '$highlight', {
+        value: new Highlighter(assign_default()(options || {}, {
+          $isServer: instance.$isServer
+        }))
+      });
+    }
   }]);
 
-  return Highlight;
+  return Highlighter;
 }();
 
-var main_HightlightPlugin = function HightlightPlugin(vm, options) {
-  var instance = new vm();
-  Object.defineProperty(vm.prototype, '$highlight', {
-    value: new main_Highlight(assign_default()(options || {}, {
-      $isServer: instance.$isServer
-    }))
-  });
-};
-
-/* harmony default export */ var main = (main_HightlightPlugin);
+/* harmony default export */ var main = (main_Highlighter);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
