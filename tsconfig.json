@@ -31,9 +31,11 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
-    "tests/**/*.ts"
+    "tests/**/*.ts",
+    "types/**/*.ts"
   ],
   "exclude": [
+    "build",
     "node_modules"
   ]
 }

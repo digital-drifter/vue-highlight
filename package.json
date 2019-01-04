@@ -1,9 +1,29 @@
 {
-  "name": "vue-highlight",
+  "name": "@digital-drifter/vue-highlight",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "main": "dist/vue-highlight.common.js",
+  "module": "dist/vue-highlight.umd.js",
+  "unpkg": "dist/vue-highlight.js",
+  "jsdelivr": "dist/vue-highlight.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "src",
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "sideEffects": false,
+  "author": {
+    "email": "whydoesmycodework@gmail.com",
+    "name": "Brian Lee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-drifter/vue-highlight.git"
+  },
   "scripts": {
     "build": "vue-cli-service build --target lib src/main.ts",
+    "build:release": "node build/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -23,6 +43,7 @@
     "@vue/cli-service": "^3.2.3",
     "@vue/test-utils": "^1.0.0-beta.28",
     "babel-core": "7.0.0-bridge.0",
+    "semver": "^5.6.0",
     "ts-jest": "^23.10.5",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.2.2",

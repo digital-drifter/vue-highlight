@@ -1,6 +1,6 @@
 import Vue, { PluginFunction, VueConstructor } from 'vue'
 import { highlightBlock } from 'highlight.js'
-import { VueHighlight, VueHighlightOptions } from '@/vue-highlight'
+import { VueHighlight, VueHighlightOptions } from '../types'
 
 class Highlight implements VueHighlight {
   options: VueHighlightOptions
