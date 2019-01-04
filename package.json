@@ -2,10 +2,8 @@
   "name": "@digital-drifter/vue-highlight",
   "version": "0.2.0",
   "license": "MIT",
-  "main": "dist/vue-highlight.common.js",
-  "module": "dist/vue-highlight.umd.js",
-  "unpkg": "dist/vue-highlight.js",
-  "jsdelivr": "dist/vue-highlight.js",
+  "main": "dist/@digital-drifter/vue-highlight.common.js",
+  "module": "dist/@digital-drifter/vue-highlight.umd.js",
   "typings": "types/index.d.ts",
   "files": [
     "src",
