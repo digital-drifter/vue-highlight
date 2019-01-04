@@ -1,11 +1,13 @@
 import Vue, { PluginFunction, VueConstructor } from 'vue'
 import { highlightBlock } from 'highlight.js'
-import { VueHighlight, VueHighlightOptions } from '../types'
+import VueHighlight, { VueHighlightOptions } from '../types'
 
-class Highlight implements VueHighlight {
+class Highlighter extends VueHighlight {
   options: VueHighlightOptions
 
   constructor (options: VueHighlightOptions) {
+    super(options)
+
     this.options = options
   }
 
@@ -14,12 +16,12 @@ class Highlight implements VueHighlight {
   }
 }
 
-const HightlightPlugin: PluginFunction<any> = (vm: VueConstructor<Vue>, options?: any): void => {
+const VueHighlightPluginFunction: PluginFunction<any> = (vm: VueConstructor<Vue>, options?: any): void => {
   const instance = new vm()
 
   Object.defineProperty(vm.prototype, '$highlight', {
-    value: new Highlight(Object.assign(options || {}, { $isServer: instance.$isServer }))
+    value: new Highlighter(Object.assign(options || {}, { $isServer: instance.$isServer }))
   })
 }
 
-export default HightlightPlugin
+export default VueHighlightPluginFunction
