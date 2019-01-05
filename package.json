@@ -1,6 +1,6 @@
 {
   "name": "@digital-drifter/vue-highlight",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "license": "MIT",
   "main": "dist/@digital-drifter/vue-highlight.common.js",
   "module": "dist/@digital-drifter/vue-highlight.umd.js",
